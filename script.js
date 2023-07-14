@@ -17,17 +17,18 @@ function getPlayerChoice () {
 return prompt('Your choice!').toLowerCase();
 } 
 
-playerSelection = getPlayerChoice();
-computerSelection = getComputerChoice();
-
+    let playerSelection = getPlayerChoice();
+    let computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
-    userScore = 0
-    computerScore = 0;
+    
+    let userScore = 0;
+    let computerScore = 0;
+
     if (playerSelection === computerSelection) {
         userScore += 1
         computerScore += 1
-        return  'Tie!' + userScore + '-' + computerScore;
+        return 'Tie!' + userScore + '-' + computerScore;
     }
     else if (playerSelection === 'rock' && computerSelection === 'scissors'){
         userScore += 1
@@ -44,20 +45,16 @@ function playRound(playerSelection, computerSelection) {
         computerScore += 1
         return 'You Lose! ' + userScore + '-' + computerScore;
 
-}
+    }
 
-const roundResult = playRound(playerSelection, computerSelection)
+    let roundResult = playRound(playerSelection, computerSelection)
 
-function game(playRound) {
-    playRound(playerSelection, computerSelection)
-    console.log(roundResult)
-    playRound(playerSelection, computerSelection)
+    function game() {
+    playRound(playerSelection, computerSelection);
     console.log(roundResult)
 }
 
-
-game(playRound);
-
+game()
 
 
 
