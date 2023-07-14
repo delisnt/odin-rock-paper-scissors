@@ -1,3 +1,4 @@
+
 function getComputerChoice() {
     const computerChoice = Math.floor(Math.random() * 3)
     let computerResult = ''
@@ -17,18 +18,20 @@ function getPlayerChoice () {
 return prompt('Your choice!').toLowerCase();
 } 
 
+    let userScore = 0;
+    let computerScore = 0;
     let playerSelection = getPlayerChoice();
     let computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
-    
-    let userScore = 0;
-    let computerScore = 0;
+
+    playerSelection = getPlayerChoice();
+    computerSelection = getComputerChoice();
 
     if (playerSelection === computerSelection) {
         userScore += 1
         computerScore += 1
-        return 'Tie!' + userScore + '-' + computerScore;
+        return 'Tie! ' + userScore + '-' + computerScore;
     }
     else if (playerSelection === 'rock' && computerSelection === 'scissors'){
         userScore += 1
@@ -44,18 +47,17 @@ function playRound(playerSelection, computerSelection) {
     }
         computerScore += 1
         return 'You Lose! ' + userScore + '-' + computerScore;
-
     }
 
-    let roundResult = playRound(playerSelection, computerSelection)
-
+    
     function game() {
-    playRound(playerSelection, computerSelection);
-    console.log(roundResult)
+    console.log(playRound(playerSelection,computerSelection))
+    console.log(playRound(playerSelection,computerSelection))
+    console.log(playRound(playerSelection,computerSelection))
+    console.log(playRound(playerSelection,computerSelection))
+    console.log(playRound(playerSelection,computerSelection))
 }
 
-game()
 
 
-
-
+game() 
