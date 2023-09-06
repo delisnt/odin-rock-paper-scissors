@@ -51,13 +51,10 @@ function playRound(playerSelection, computerSelection) {
 
     
     function game() {
-    console.log(playRound(playerSelection,computerSelection))
-    console.log(playRound(playerSelection,computerSelection))
-    console.log(playRound(playerSelection,computerSelection))
-    console.log(playRound(playerSelection,computerSelection))
-    console.log(playRound(playerSelection,computerSelection))
+        for (let i = 0; i < 5; i++){
+            console.log(playRound(playerSelection,computerSelection))
+            }
 }
-
 
 
 game() 
