@@ -39,6 +39,8 @@ function getComputerChoice() {
 function playRound(computerSelection, userChoice) {
 
     if (computerScore == 3){
+        userScore = 0;
+        computerScore = 0;
         return "*explodes*"
     }
     if (userScore == 3){
