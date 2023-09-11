@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <script src="script.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-Paper-Scissors</title>
-</head>
-<body>
-    <h1>Rock-Paper-Scissors</h1>
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+    <div class="picks-display">
+    <h2><img class="icons" src="img/minecraft_creeper.png" alt="computer">   <span id="computer-choice"></span></h2>
+    <h2><img class="icons" src="img/minecraft_steve.png" alt="">   <span id="user-choice"></span></h2>
+  </div>
+    <div class="picks">
+    <button id="rock"><img id="rock"src="img/rock.png" alt="Rock"></button>
+    <button id="paper"><img id="paper" src="img/paper_minecraft.png" alt="Paper"></button>
+    <button id="scissors"><img id="scissors" src="img/scissors.png" alt="Scissors"></button>
+    </div>
+    <div class="result">
+      <h2>Result: <span id="result"></span></h2>
+    </div>
+  </div>
+    <script src="script.js" charset="utf-8"></script>
+  </body>
 </html>
